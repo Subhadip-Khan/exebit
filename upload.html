@@ -25,7 +25,8 @@
       formData.append("image", document.getElementById('image').files[0]);
       fetch('https://script.google.com/macros/s/AKfycby9IOSustFPLFy_9w1TvK5MG3Cvt-Q08JCkrv3NJV-DKAYd-cpVsxSpRgO7tWCWunaSkw/exec', { // Replace with your deployed web app URL
         method: 'POST',
-        body: formData
+        body: formData,
+        mode: 'no-cors'
       }).then(function(response) {
         // Handle successful submission
         console.log('Data submitted successfully!');
